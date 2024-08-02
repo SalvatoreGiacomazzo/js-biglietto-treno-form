@@ -13,28 +13,48 @@
 </head>
 <body>
    <div class="container">
-     <form>
+     <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+    <form>
         <div class="form-row">
           <div class="col">
             <label>Nome Cognome</label>
-            <input type="text" class="form-control">
+            <input id="name" type="text" class="form-control">
           </div>
           <div class="col">
             <label>Km da percorrere</label>
-            <input type="number" class="form-control">
+            <input id="kilometers" type="number" min="5" max="200" value="100" class="form-control">
           </div>
           <div class="col">
             <label>Fascia d'età</label>
-            <select class="form-control">
-                <option>Junior -18</option>
-                <option>Adulto +18</option>
-                <option>Senior +65</option>
+            <select class="form-control" id="age">
+                <option value="junior">Junior -18</option>
+                <option value="standard">Adulto +18</option>
+                <option value="senior">Senior +65</option>
               </select>
+             <div class="card-footer container">
+              <button id="generate" class="bg-primary color-white p-1 m-2" type="submit">Genera</button>
+              <button id="reset" value="reset" class="bg-secondary color-white p-1 m-2" type="reset">Annulla</button>
+            </div>
           </div>
         </div>
       </form>
     </div>
+  <section id="ticket-section">
+    <div class="container ">
+    <h1>IL TUO BIGLIETTO</h1>
+     <h5>Nome passeggero</h5> 
+     <span id="name-display"></span>
+    <h5> Offerta</h5>
+     <span id="ticket-type"></span>
+     <h5>Carrozza</h5>
+     <span id="carriage"></span>
+     <h5> Codice CP</h5>
+     <span id="cp-code"></span>
+     <h5>Costo del Biglietto</h5>
+     <span id="ticket-price"></span>
+    </div>
 
+  </section>
 
 
 
